@@ -24,16 +24,18 @@ $baseurl = base_url()
             ?>
             <div class="wrapper">
                 <div class="stripe bg-gradient"></div>
-                <header class="bg-dark">
-                    <img class="header-icon" src="<?php echo $baseurl?>/static/images/ic_appicon.svg" alt="M" width="32"/>
-                    <span class="title--text">
-                        <a href="<?php echo $baseurl?>">Magnify</a>
-                        <?php
-                            if(isset($title)) {
-                        ?>
-                            <span class="page-title"><?php echo $title;?></span>
-                        <?php } ?>
-                    </span>
+                <header class="navbar navbar-dark bg-dark">
+                    <a href="<?php echo $baseurl?>" class="navbar-brand">
+                        <img class="header-icon" src="<?php echo $baseurl?>/static/images/ic_appicon.svg" alt="M" width="32"/>
+                        <span class="title--text">
+                            Magnify
+                            <?php
+                                if(isset($title)) {
+                            ?>
+                                <span class="page-title"><?php echo $title;?></span>
+                            <?php } ?>
+                        </span>
+                    </a>
             </header>
             <?php
                 if(isset($nosidebar) && !$nosidebar) {
