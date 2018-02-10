@@ -6,16 +6,19 @@ class SwarmBot extends CI_Controller {
     {
             if ( ! file_exists(APPPATH.'views/swarmbot/'.$page.'.php'))
             {
-                    // Whoops, we don't have a page for that!
-                    show_404();
+                // Whoops, we don't have a page for that!
+                include_once(APPPATH.'controllers/Magnify404.php');
+                $c = new Magnify404();
+                $c->index();
             }
-            
-            $data['nosidebar'] = false;
-            $data['title'] = ucfirst($page); // Capitalize the first letter
-    
-            $this->load->view('templates/header', $data);
-            $this->load->view('swarmbot/'.$page, $data);
-            $this->load->view('templates/footer', $data);
+            else {
+                $data['nosidebar'] = false;
+                $data['title'] = ucfirst($page); // Capitalize the first letter
+        
+                $this->load->view('templates/header', $data);
+                $this->load->view('swarmbot/'.$page, $data);
+                $this->load->view('templates/footer', $data);
+            }
     }
 }
 ?>
