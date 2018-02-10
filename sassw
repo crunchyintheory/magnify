@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./sass
+node-sass -w --output-style compressed --source-map true -o ./static/styles/ ./scss/

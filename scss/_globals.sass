@@ -1,0 +1,39 @@
+html,
+body,
+.wrapper
+    height:                     100%
+
+body
+    -webkit-font-smoothing:     antialiased
+    -moz-osx-font-smoothing:    grayscale
+    background-color:           #404040
+    border:                     0
+    color:                      #eee
+    font-family:                'Muli', 'Lato', 'Montserrat', 'Open Sans', 'sans-serif'
+    font-weight:                300
+    margin:                     0
+    padding:                    0
+    text-rendering:             optimizeLegibility
+
+.wrapper
+    display:                    grid
+    grid-template:              'stripe stripe' 5px 'header header' 50px 'sidebar body' 1fr / 300px 1fr
+    padding:                    0
+
+nosidebar + .wrapper
+    grid-template:              'stripe' 5px 'header' 50px 'body' 1fr / 1fr
+
+aside, article, section
+    padding:                    5px
+
+.content
+    grid-area:                  body
+    overflow:                   auto
+
+a
+    color:                      inherit
+    cursor:                     pointer
+    text-decoration:            none
+
+::selection
+    background-color:           $logo1

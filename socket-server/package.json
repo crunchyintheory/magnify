@@ -1,0 +1,22 @@
+{
+  "name": "magnify-socket-server",
+  "version": "1.0.0",
+  "description": "WebSocket handler for Magnify platform",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crunchyintheory/magnify.git"
+  },
+  "author": "crunchyintheory",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crunchyintheory/magnify/issues"
+  },
+  "homepage": "https://github.com/crunchyintheory/magnify#readme",
+  "dependencies": {
+    "socket.io": "^2.0.4"
+  }
+}

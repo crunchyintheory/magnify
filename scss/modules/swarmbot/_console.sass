@@ -1,0 +1,65 @@
+.console
+    margin-top:     10px
+    margin-left:    90px
+    margin-right:   90px
+    margin-bottom:  25px
+    overflow:       auto
+
+    &.filter-errors
+        .console-info,
+        .console-debug
+            display:    none
+
+.buttons
+    grid-column:    3 / 4
+    grid-row:       4 / 5
+
+.buttons button:first-child
+    margin-right:   40px
+
+.console-line
+    display:            block
+    font-size:          16px
+    word-wrap:          break-word
+
+.console-line-level
+    font-family:        monospace
+
+    &::before,
+    &::after
+        color:          $light
+        font-family:    CURSIVE
+        font-weight:    bold
+
+    &::before
+        content:        '<'
+
+    &::after
+        content:        '>'
+
+.console-error
+    background-color:   transparentize($error, .75)
+
+.console-warning
+    background-color:   transparentize($warn, .75)
+
+.console-websocket
+    color: gray
+    font-style: italic
+
+.console-error-level,
+.console-warning-level,
+.console-info-level
+    font-weight:        bold
+
+.console-error-level
+    color:              $error
+
+.console-warning-level
+    color:              $warn
+
+.console-info-level
+    color:              $logo1
+
+.console-debug-level
+    color:              $logo2
